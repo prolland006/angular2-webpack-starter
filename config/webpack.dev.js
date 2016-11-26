@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3000;
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   host: HOST,
-  port: PORT,
+  port: 8080,
   ENV: ENV,
   HMR: HMR
 });
