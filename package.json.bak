@@ -29,6 +29,7 @@
     "github-deploy": "npm run github-deploy:dev",
     "heroku": "npm run server:prod -- -p $PORT",
     "lint": "npm run tslint \"src/**/*.ts\"",
+	"postinstall": "npm run build:prod",
     "postversion": "git push && git push --tags",
     "prebuild:dev": "npm run clean:dist",
     "prebuild:prod": "npm run clean:dist",
@@ -57,7 +58,8 @@
     "webdriver:start": "npm run webdriver-manager start",
     "webdriver:update": "npm run webdriver-manager update",
     "webpack-dev-server": "webpack-dev-server",
-    "webpack": "webpack"
+    "webpack": "webpack",
+	"heroku-postbuild": "webpack -p --config config/webpack.config.js --progress"
   },
   "dependencies": {
     "@angular/common": "2.2.1",
