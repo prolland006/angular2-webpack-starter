@@ -27,7 +27,7 @@
     "github-deploy:dev": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubDev",
     "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubProd",
     "github-deploy": "npm run github-deploy:dev",
-	  "heroku": "npm run server:prod -- -p $PORT",
+    "heroku": "npm run server:prod -- -p $PORT",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "postversion": "git push && git push --tags",
     "prebuild:dev": "npm run clean:dist",
@@ -76,6 +76,7 @@
     "core-js": "^2.4.1",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
+    "npm-run-all": "^3.1.1",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "~0.6.26"
   },
@@ -130,6 +131,7 @@
     "webpack": "2.1.0-beta.27",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "2.1.0-beta.11",
+    "webpack-livereload-plugin": "^0.9.0",
     "webpack-md5-hash": "^0.0.5",
     "webpack-merge": "~0.17.0"
   },
@@ -141,7 +143,7 @@
     "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
   },
   "engines": {
-    "node": ">= 4.2.1",
+    "node": ">= 6",
     "npm": ">= 3"
   }
 }
